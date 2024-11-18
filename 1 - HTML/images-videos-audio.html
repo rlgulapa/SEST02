@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images, Videos, and Audio</title>
+    <!-- favicon: 96px x 96px -->
+    <link rel="icon" href="favicon.png" />
+  </head>
+  <body>
+    <h1>Images, Videos, and Audio</h1>
+    <!-- Source(src) -->
+    <!-- Alternative Text (alt) -->
+    <!-- Copy Image Address -->
+    <img
+      src="https://images5.alphacoders.com/413/413842.jpg"
+      alt="Naruto Image"
+      width="300"
+      height="auto"
+    />
+
+    <img
+      src="images/naruto-image.webp"
+      alt="Another Naruto Image"
+      width="300"
+    />
+
+    <h2>Videos</h2>
+    <a href="https://onecodecamp.com/" target="_blank">
+      <video controls autoplay muted loop>
+        <source src="videos/onecodecamp-mp4.mp4" type="video/mp4" />
+        <source src="videos/onecodecamp-wav.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+    </a>
+
+    <h2>Audio</h2>
+    <audio controls autoplay muted loop>
+      <source src="audios/audio-mp3.mp3" type="audio/mp3" />
+      <source src="audios/audio-wav.wav" type="audio/wav" />
+    </audio>
+
+    <h2>YouTube Video</h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/-G-SoCUgqDw?si=dU42oP9BtdpAq7U1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>

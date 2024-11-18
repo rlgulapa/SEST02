@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <ul id="top">
+            <li>
+              <a href="home.html" target="_self">Home</a>
+            </li>
+            <li>
+              <a href="experience.html" target="_self">Experience</a>
+            </li>
+            <li>
+              <a href="food.html">Food</a>
+            </li>
+            <li>
+              <a href="movies.html">Movies</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact me</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <h1>Contact Me</h1>
+      <form action="" enctype="multipart/form-data">
+        <div>
+          <label for="fullname-id">Name:</label>
+          <input
+            type="text"
+            name="user-fullname"
+            id="fullname-id"
+            placeholder="John Doe"
+            required
+            pattern="[\W\s\.^\D]{5,40}"
+            title="Name must be between 5 to 40 characters in length and contain letters and dot."
+          />
+        </div>
+        <!-- REGular EXpressions -->
+        <!-- \w - any words -->
+        <!-- \s - spaces -->
+        <!-- \d - any digits -->
+        <!-- \. -->
+        <div>
+          <label for="email-id">Email:</label>
+          <input
+            type="email"
+            name="user-email"
+            id="email-id"
+            placeholder="johndoe@example.com"
+            required
+          />
+        </div>
+        <div>
+          <label for="number-id">Mobile No:</label>
+          <input
+            type="tel"
+            name="user-number"
+            id="number-id"
+            pattern="09[0-9]{2}-[0-9]{3}-[0-9]{4}"
+            placeholder="09xx-xxx-xxxx"
+            required
+          />
+        </div>
+        <div>
+          <label for="datetime-local-id">Proposed meeting schedule:</label>
+          <input
+            type="datetime-local"
+            name="meeting-datetime-local"
+            id="datetime-local-id"
+          />
+        </div>
+        <div>
+          <label for="message-id">Message:</label><br />
+          <textarea
+            name="user-message"
+            id="message-id"
+            placeholder="What's on your mind? Let's collaborate."
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <!-- Hidden -->
+        <input
+          type="hidden"
+          name="user-hidden-data"
+          value="sensitive-information"
+        />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+      <footer>
+        <h3>Personal Information</h3>
+        <span><strong>Full Name :</strong> Ralph Lauren Gulapa</span
+        ><br /><br />
+        <span><strong>Professional Title :</strong> Ralph Lauren Gulapa</span
+        ><br /><br />
+        <span
+          ><strong>Email Address :</strong>
+          <a href="mailto: rlgulapa@gmail.com">rlgulapa@gmail.com</a></span
+        ><br /><br />
+        <span><strong>Phone Number :</strong> 09xx-12345678</span><br /><br />
+      </footer>
+    </main>
+  </body>
+</html>
