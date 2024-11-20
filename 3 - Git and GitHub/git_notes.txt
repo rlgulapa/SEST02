@@ -1,65 +1,45 @@
 - Create a repository
 git init
-
 - Configure Git
 git config --global user.name "username"
 git config user.name
-
 git config --global user.email "email"
 git config user.email
-
 Git 3 Stage Architecture
-
 1. Working Area
 2. Staging Area
 3. Commit Stage
-
 Legends
 U - Untracked
 A - Added
 M - Modified
-
 - Check the status of all our files and folders
 git status
-
 - Add the modified files to the staging Area
 git add .
-
 - Create a commit
 git commit -m "Description."
-
 - Check the history
 git log
 git log --oneline
-
 - REVERTING
 git revert [commit-hash]
 git revert --no-edit [commit-hash]
-
 - RESETTING
-git reset [commit-hash
-
+git reset [commit-hash]
 - Branching
-
 - List all of the branch
 git branch -a
-
 - Create a new branch
 git branch [branch-name]
-
 - Switch to a different branch
 git checkout [branch-name]
-
 === Create a Remote repository ===
-
 - Add a remote to the local repository
 git remote add origin [remote-repository-url]
-
 - Rename the master to the main
 git branch -M main
-
 - Push commits to remote repository for the first time.
 git push -u origin main
-
 - Push commits to the remote repository
 git push
