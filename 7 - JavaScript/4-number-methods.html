@@ -34,6 +34,51 @@
       // BODMAS - Brackets, Order, Division, Multiplication, Addition, Subtraction
       let answer = 3 + (4 * (5 - 2) ** 2) / 2;
       console.log(`Answer: ${answer}`);
+
+      // Assignment Expressions
+      console.log("=== Assignment Expressions ====");
+      // Single Equal Sign (=)
+      let num4 = 10;
+      let num5 = 5;
+      // Addition Assignment (+=)
+      // num4 = num4 + num5;
+      num4 += num5;
+      console.log(`The new value of num4: ${num4}`);
+
+      // Computation: 10 + 5 = 15
+      // Subtraction Assignment (-=)
+      num4 -= num5;
+      console.log(`The new value of num4: ${num4}`);
+      // Computation: 15 - 5 = 10
+
+      // Multiplication Assignment (*=)
+      num4 *= num5;
+      console.log(`The new value of num4: ${num4}`);
+      // Computation: 10 * 5 = 50
+
+      // Division Assignment (/=)
+      num4 /= num5;
+      console.log(`The new value of num4: ${num4}`);
+      // Computation: 50 / 5 = 10
+
+      // Exponent Assignment (**=)
+      num4 **= num5;
+      console.log(`The new value of num4: ${num4}`);
+      // Computation: 10 ** 5 = 100000
+
+      // Remainder Assignment (%=)
+      num4 %= num5;
+      console.log(`The new value of num4: ${num4}`);
+      // Computation: 100000 % 5 = 0
+
+      // 3. Number Methods
+      // toString(): Convert number to a string
+      const numberToString = num1.toString();
+      console.log(`Num1: ${numberToString} ${typeof numberToString}`);
+
+      // .toFixed(noOfDecimalPlaces): format number with specified number of decimal places
+      const fixedDecimalPlaces = num3.toFixed(4);
+      console.log(`Num3: ${fixedDecimalPlaces} ${typeof fixedDecimalPlaces}`);
     </script>
   </body>
 </html>
