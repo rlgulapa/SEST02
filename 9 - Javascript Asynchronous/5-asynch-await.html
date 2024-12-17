@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Async/Await</title>
+  </head>
+  <body>
+    <h1>JS Async/Await</h1>
+    <script>
+      // async = makes a function return a promise
+      // await = makes a async function wait for a promise
+      const executeTask = async () => {
+        try {
+          const task1Result = await task1();
+          console.log(task1Result);
+          const task2Result = await task2();
+          console.log(task2Result);
+          const task3Result = await task3();
+          console.log(task3Result);
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      };
+      executeTask();
+    </script>
+  </body>
+</html>

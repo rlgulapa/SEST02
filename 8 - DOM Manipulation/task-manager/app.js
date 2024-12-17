@@ -7,6 +7,7 @@ const filterOption = document.querySelector(".filter-todo");
 todoButton.addEventListener("click", addTodo);
 document.addEventListener("DOMContentLoaded", renderTodos);
 todoList.addEventListener("click", deleteOrCompleteTodo);
+filterOption.addEventListener("change", filterTodos);
 
 function addTodo(event) {
   // This function will be used to add a task.
@@ -128,4 +129,30 @@ function updateLocalTodoStatus(task, status) {
   todo.status = status;
   const serializedTodos = JSON.stringify(todos);
   localStorage.setItem("todos", serializedTodos);
+}
+
+function filterTodos(event) {
+  // Function to filter task based on completion status
+  const todos = todoList.childNodes;
+  todos.forEach(function (todo) {
+    const selectedValue = event.target.value;
+    console.log(todo);
+    switch (selectedValue) {
+      case "all":
+        todo.style.display = "flex";
+        break;
+      case "completed":
+        if (todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+      case "uncompleted":
+        if (!todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+    }
+  });
 }
