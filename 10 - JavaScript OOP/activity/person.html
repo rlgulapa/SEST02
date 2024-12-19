@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Person OOP Activity</title>
+  </head>
+  <body>
+    <h1>Person OOP Activity</h1>
+    <script>
+      class Person {
+        constructor(
+          name,
+          age,
+          occupation,
+          hobbies = [],
+          street,
+          city,
+          state,
+          zipcode
+        ) {
+          this.name = name;
+          this.age = age;
+          this.occupation = occupation;
+          this.hobbies = hobbies;
+          this.address = new Address(street, city, state, zipcode);
+        }
+        introduce() {
+          console.log(`Hi! this is ${this.name}.`);
+          console.log(`${this.name} is ${this.age} years young.`);
+          console.log(`${this.name}'s profession is ${this.occupation}.`);
+          console.log(`${this.name}'s hobbies are :`);
+          this.hobbies.forEach((hobby) => {
+            console.log(`${hobby}`);
+          });
+        }
+        getOlder() {
+          this.age += 1;
+          console.log(`${this.name}'s age is now ${this.age}.`);
+        }
+        changeOccupation(newOccupation) {
+          this.occupation = newOccupation;
+          console.log(`${this.name} changed occupation to ${this.occupation}.`);
+        }
+        addHobby(newHobby) {
+          this.hobbies.push(newHobby);
+          console.log(`${this.name} added a new hobby ${newHobby}.`);
+        }
+        move(newStreet, newCity, newState, newZipCode) {
+          this.address.street = newStreet;
+          this.address.city = newCity;
+          this.address.state = newState;
+          this.address.zipcode = newZipCode;
+          console.log(
+            `${this.name} moved to ${this.address.street}, ${this.address.city}, ${this.address.state}, ${this.address.zipcode}.`
+          );
+        }
+      }
+
+      class Address {
+        constructor(street, city, state, zipcode) {
+          this.street = street;
+          this.city = city;
+          this.state = state;
+          this.zipcode = zipcode;
+        }
+      }
+
+      const person1 = new Person(
+        "John Smith",
+        40,
+        "Businessman",
+        ["Skiing", "Diving", "Swimming"],
+        "Baker Street",
+        "Sidmouth",
+        "Devon",
+        "0700"
+      );
+
+      person1.introduce();
+      person1.getOlder();
+      person1.changeOccupation("Cyclist");
+      person1.addHobby("Cycling");
+      person1.move("Baking Street", "Plymouth", "Exeter", "1200");
+
+      const person2 = new Person(
+        "John LLoyd",
+        47,
+        "Actor",
+        ["Acting", "Singing", "Dancing"],
+        "Franco St.",
+        "Makati",
+        "Manila",
+        "1400"
+      );
+
+      person2.introduce();
+      person2.getOlder();
+      person2.changeOccupation("Dancer");
+      person2.addHobby("Pilates");
+      person2.move("Corcuerra St.", "Mandaluyong", "Manila", "1500");
+
+      const person3 = new Person(
+        "Piolo Pascual",
+        49,
+        "Businessman",
+        ["Body building", "Cycling", "Swimming"],
+        "Ellen St.",
+        "Melbourne",
+        "Melbourne",
+        "1900"
+      );
+
+      person3.introduce();
+      person3.getOlder();
+      person3.changeOccupation("Swimmer");
+      person3.addHobby("Acting");
+      person3.move("Beking St.", "Quezon City", "Manila", "1300");
+    </script>
+  </body>
+</html>
