@@ -1,9 +1,11 @@
-import LoginForm from "./components/5-LoginForm";
+import Products from "./components/7-FetchAPI";
+
 function App() {
   return (
     <>
-      <LoginForm></LoginForm>
+    <Products></Products>
     </>
   );
 }
+
 export default App;

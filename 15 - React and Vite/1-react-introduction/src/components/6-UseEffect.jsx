@@ -20,13 +20,22 @@ function UseEffect(){
     // useEffect(() => {}, []) - Run only on mount.
     // useEffect(() => {}, [value]) - Run on mount and when the state variable updates.
 
+    // useEffect(() => {
+    //     // Perform the side effect.
+    //     console.log("Component mounts.")
+
+    //     // Optional return function.
+    //     return () => {
+    //         console.log("Component will unmount.")
+    //     }
+    // }, [count]);
+
     useEffect(() => {
         // Perform the side effect.
-        console.log("Component mounts.")
+        console.log("The component mounts.");
 
-        // Optional return function.
         return () => {
-            console.log("Component will unmount.")
+            console.log("The component unmounts.")
         }
     }, [count]);
 
